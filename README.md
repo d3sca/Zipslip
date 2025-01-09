@@ -1,10 +1,17 @@
-## ZipSlip Exploit 
+# ZipSlip Exploit 
 
 a Python script to test ZipSlip . The script allows you to specify a path to include files in locations when the ZIP file is extracted.
 Specify a  path (../) to the file you want to write.
 
 
-Usage
+
+## requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
 
 Clone this repository:
 
@@ -13,9 +20,10 @@ cd zipslip-exploit-generator
 
 Run the script with the following arguments:
 
+```bash
 python slip.py -n <zip_name> -p <file_path> -z <zip_slip_path>
-
-Arguments
+```
+## Arguments
 
 -n, --name: Name of the ZIP file to create.
 
@@ -23,18 +31,18 @@ Arguments
 
 -z, --zipslip: Number of ../ sequences to include in the malicious payload path (e.g., ;../../../../../).
 
-Example
+## Example
 
 Create a ZIP file named poc.zip containing file.jsp at a malicious path:
 
 python slip.py -n poc.zip -p ./file.jsp -z ";../../../../../"
 
-Output
+## Output
 
 The script generates a ZIP file with the specified payload path. You can use this file to test ZipSlip vulnerabilities in extraction utilities or applications.
 
 
-Disclaimer
+## Disclaimer
 
 This script is for educational purposes and authorized testing only. Do not use it for malicious purposes.
 Always obtain permission before testing on any system.
