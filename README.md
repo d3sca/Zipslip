@@ -1,4 +1,6 @@
+ZipSlip Exploit 
 
+a Python script to test ZipSlip . The script allows you to specify a path to include files in locations when the ZIP file is extracted.
 Specify a  path (../) to the file you want to write.
 
 
